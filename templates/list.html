@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de músicas</title>
+</head>
+<body>
+    <ul>
+    {% for musica in musicas %}
+        <li>{{ musica.get_titulo() }} - {{ musica.get_artista() }}</li>
+    {% endfor %}
+    </ul>
+    <form method="post">
+        <label for="titulo">Título:
+            <input type="text" name="titulo">
+        </label>
+        <label for="genero">Gênero:
+            <input type="text" name="genero">
+        </label>
+        <label for="artista">Artista:
+            <input type="text" name="artista">
+        </label>
+        <label for="compositor">Compositor:
+            <input type="text" name="compositor">
+        </label>
+        <label for="duracao">Duração:
+            <input type="text" name="duracao">
+        </label>
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
+</html>
